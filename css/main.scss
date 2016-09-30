@@ -1,0 +1,116 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #b2f33c;
+
+$grey-color:       #acacac;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+html{
+  font-size: 100%;
+}
+
+body{
+  margin-top: 4rem;
+  font-size: $base-font-size;
+  overflow-x: hidden;
+}
+
+.display--heavy{font-family:"Passion One","Verdana","Palatino","Arial",sans-serif;}
+.display--soft{font-family:"Tangerine","Verdana","Palatino","Arial",sans-serif;}
+
+.masthead{
+  background:transparent;
+  padding:0;
+  text-align:center;
+  position:absolute;
+  top:15%;
+  width:100%
+}
+.masthead h1{
+  font-size:4rem;
+  font-weight:400;
+  span {
+    display:block;
+  }
+}
+.masthead .motto{
+  font-weight:400;
+  position:relative;
+  top:-2em;
+  color:#666;
+}
+
+@media only screen and (min-width: 38em) {
+  .masthead{
+    top:9%;
+  }
+  .masthead h1{
+    font-size:6rem;
+  }
+  .masthead .motto{
+    top:-2.5em;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 50em) {
+  body{
+    font-size: 24px;
+  }
+  .masthead .motto{
+    top:-7.75em;
+  }
+}
+@media only screen and (min-width: 90em) {
+  .masthead{
+    top:-7%;
+  }
+  .masthead h1{
+    font-size:12rem;
+  }
+  .masthead h1 span{
+    display:block;
+  }
+  .masthead .motto{
+    top:-11.5em;
+    font-size: 2rem;
+  }
+}
+
+img{
+  position: relative;
+  z-index: -1;
+}
+
+[role="main"] {
+  margin-top: -5px;
+  padding: 3rem 1rem;
+  background-color: $brand-color;
+}
+
+.claim{
+  margin: 3rem auto;
+  max-width: 600px;
+}
+
+.claim__title{
+  display: block;
+  font-size: 2rem;
+}
+
+.twitter-follow-button{
+  margin: 0 auto;
+  display: block;
+}
