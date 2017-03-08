@@ -3,8 +3,19 @@
 ---
 @charset "utf-8";
 
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+body {
+  font-family: "system";
+}
+
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "system";
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -23,13 +34,38 @@ html{
 }
 
 body{
-  margin-top: 4rem;
+  margin: 4rem 0 0 0;
   font-size: $base-font-size;
   overflow-x: hidden;
 }
 
 .display--heavy{font-family:"Passion One","Verdana","Palatino","Arial",sans-serif;}
 .display--soft{font-family:"Tangerine","Verdana","Palatino","Arial",sans-serif;}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
 
 .masthead{
   background:transparent;
@@ -86,6 +122,31 @@ body{
   .masthead .motto{
     top:-11.5em;
     font-size: 2rem;
+  }
+}
+
+#owls{
+  display: flex;
+  max-width: 54.375rem;
+  margin: 0 auto;
+}
+
+.owl{
+  &:nth-of-type(2){
+    opacity: 0;
+    -webkit-animation: fadein 1s 0s forwards;
+       -moz-animation: fadein 1s 0s forwards;
+        -ms-animation: fadein 1s 0s forwards;
+         -o-animation: fadein 1s 0s forwards;
+            animation: fadein 1s 0s forwards;
+  }
+  &:nth-of-type(3){
+    opacity: 0;
+    -webkit-animation: fadein 1s .5s forwards;
+       -moz-animation: fadein 1s .5s forwards;
+        -ms-animation: fadein 1s .5s forwards;
+         -o-animation: fadein 1s .5s forwards;
+            animation: fadein 1s .5s forwards;
   }
 }
 
